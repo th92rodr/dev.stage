@@ -1,0 +1,20 @@
+{
+  "name": "dev-stage-server",
+  "version": "1.0.0",
+  "author": "https://github.com/th92rodr",
+  "license": "BSD-3-Clause",
+  "description": "",
+  "main": "src/server.ts",
+  "engines": {
+    "node": "22.13.1",
+    "npm": "10.9.2"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.1",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}
