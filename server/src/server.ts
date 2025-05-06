@@ -11,6 +11,7 @@ import {
 
 import { env } from '@/env'
 import { accessInviteLinkRoute } from '@/routes/access-invite-link-route'
+import { getRankingRoute } from '@/routes/get-ranking-route'
 import { getSubscriberInviteClicksRoute } from '@/routes/get-subscriber-invite-clicks-route'
 import { getSubscriberInvitesCountRoute } from '@/routes/get-subscriber-invites-count-route'
 import { getSubscriberRankingPositionRoute } from '@/routes/get-subscriber-ranking-position-route'
@@ -40,6 +41,7 @@ server.register(fastifySwaggerUi, {
 })
 
 server.register(accessInviteLinkRoute)
+server.register(getRankingRoute)
 server.register(getSubscriberInviteClicksRoute)
 server.register(getSubscriberInvitesCountRoute)
 server.register(getSubscriberRankingPositionRoute)
