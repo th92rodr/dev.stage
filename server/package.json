@@ -15,7 +15,10 @@
     "start": "node --env-file .env dist/server.mjs",
 
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+
+    "docker:up": "docker compose --env-file .env --file tools/docker-compose.yml up -d",
+    "docker:down": "docker compose --env-file .env --file tools/docker-compose.yml down"
   },
   "dependencies": {
     "@fastify/cors": "10.0.2",
