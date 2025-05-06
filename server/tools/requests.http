@@ -1,0 +1,51 @@
+###
+# API Test File — Requires REST Client Extension
+#
+# Extension: "REST Client" by Huachao Mao
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+#
+# How to use:
+# - Install the extension above in VS Code
+# - Click the "Send Request" text that appears above each request
+# - Or use keyboard shortcut: Ctrl+Alt+R (Windows/Linux) or Cmd+Alt+R (Mac)
+#
+# Make sure the backend server is running at: http://localhost:3333
+#
+# Below are example requests for testing the API endpoints locally
+###
+
+# Subscribe a new user
+# Requires: name, email, and an optional referrer ID
+POST http://localhost:3333/subscriptions
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@mail.com",
+  "referrer": "de71af2b-9d47-45a1-8b1d-46ed0f655b60"
+}
+
+###
+
+# Access invite link of a specific user
+GET http://localhost:3333/invites/de71af2b-9d47-45a1-8b1d-46ed0f655b60
+
+###
+
+# Get total number of clicks on a specific user referral link
+GET http://localhost:3333/subscribers/de71af2b-9d47-45a1-8b1d-46ed0f655b60/ranking/clicks
+
+###
+
+# Get total number of subscribers referred by a specific user
+GET http://localhost:3333/subscribers/de71af2b-9d47-45a1-8b1d-46ed0f655b60/ranking/count
+
+###
+
+# Get position of a specific subscriber in the ranking
+GET http://localhost:3333/subscribers/de71af2b-9d47-45a1-8b1d-46ed0f655b60/ranking/position
+
+###
+
+# Get overall ranking (top 3 subscribers)
+GET http://localhost:3333/ranking
