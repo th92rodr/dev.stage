@@ -10,6 +10,7 @@ import {
 } from 'fastify-type-provider-zod'
 
 import { env } from '@/env'
+import { subscribeToEventRoute } from '@/routes/subscribe-to-event-route'
 
 const server = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -33,6 +34,8 @@ server.register(fastifySwagger, {
 server.register(fastifySwaggerUi, {
   routePrefix: '/docs',
 })
+
+server.register(subscribeToEventRoute)
 
 server.listen({ host: env.HOST, port: env.PORT }).then(() => {
   console.log(`HTTP server listening at: http://${env.HOST}:${env.PORT}`)
