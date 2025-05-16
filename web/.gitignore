@@ -1,0 +1,16 @@
+# Ignore npm dependency directory
+node_modules/
+
+# Ignore build output directory
+dist/
+
+# Ignore next.js build output
+.next/
+out/
+
+# Ignore typescript incremental compilation files
+*.tsbuildinfo
+
+# Ignore .env files
+.env*
+!.env.example
