@@ -1,0 +1,30 @@
+{
+  "name": "dev-stage-web",
+  "version": "1.0.0",
+  "author": "https://github.com/th92rodr",
+  "license": "BSD-3-Clause",
+  "description": "Frontend application for the DevStage project, built with React.js, Next.js, and Tailwind CSS.",
+  "engines": {
+    "node": "22.13.1",
+    "npm": "10.9.2"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "@types/node": "20.17.47",
+    "@types/react": "19.1.4",
+    "@types/react-dom": "19.1.5",
+    "@tailwindcss/postcss": "4.1.7",
+    "tailwindcss": "4.1.7"
+  }
+}
