@@ -20,11 +20,12 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "typescript": "5.8.3",
+    "@biomejs/biome": "1.9.4",
+    "@tailwindcss/postcss": "4.1.7",
     "@types/node": "20.17.47",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
-    "@tailwindcss/postcss": "4.1.7",
-    "tailwindcss": "4.1.7"
+    "tailwindcss": "4.1.7",
+    "typescript": "5.8.3"
   }
 }
