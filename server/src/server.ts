@@ -30,7 +30,7 @@ server.register(fastifySwagger, {
   openapi: {
     info: {
       title: 'dev.stage',
-      version: '0.0.1',
+      version: '1.0.0',
     },
   },
   transform: jsonSchemaTransform,

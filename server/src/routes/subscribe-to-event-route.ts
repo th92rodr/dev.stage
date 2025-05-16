@@ -8,8 +8,15 @@ export const subscribeToEventRoute: FastifyPluginAsyncZod = async app => {
     '/subscriptions',
     {
       schema: {
-        summary: 'Subscribes someone to an event',
+        summary: 'Subscribe a user to the event',
         tags: ['Subscription'],
+        description:
+          'Creates a new subscription by registering a user with their name and email.\n\n' +
+          'Optionally, a referrer ID can be provided to track who referred the subscriber.\n\n' +
+          '- The email must be valid.\n' +
+          '- If the email has already been registered, the existing subscription ID is returned instead of creating a new one.\n' +
+          '- If a referrer ID is provided, it must reference an existing subscriber.\n\n' +
+          'Returns the ID of the newly created or previously existing subscription.',
         body: z.object({
           name: z.string(),
           email: z.string().email(),
