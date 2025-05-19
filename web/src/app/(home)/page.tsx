@@ -1,5 +1,6 @@
 import { Radio } from 'lucide-react'
 import Image from 'next/image'
+import { Suspense } from 'react'
 
 import { SubscriptionForm } from '@/app/(home)/subscription-form'
 
@@ -40,7 +41,9 @@ export default function Home() {
           </p>
         </div>
 
-        <SubscriptionForm />
+        <Suspense>
+          <SubscriptionForm />
+        </Suspense>
       </div>
     </div>
   )
