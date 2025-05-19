@@ -12,16 +12,19 @@ DevStage is a backend API designed to handle event subscriptions with a referral
   * Total successful invitations (tracked in Redis sorted set)
   * Invite link clicks (tracked in Redis hash)
   * Ranking position among referrers
+
 * Auto-generated Swagger documentation available at `/docs`
 * **Redis** integration for:
 
   * Tracking invite link access counts using a Redis hash (`referral:access-count`)
   * Maintaining real-time referral rankings with a Redis sorted set (`referral:ranking`)
+
 * **PostgreSQL** database via **Drizzle ORM** for:
 
   * Persisting subscriber data such as name and email
   * Ensuring reliable and queryable records of event participants
   * Enforcing email uniqueness and tracking creation timestamps
+
 * Combines real-time performance from Redis with long-term data storage in PostgreSQL
 
 ---
