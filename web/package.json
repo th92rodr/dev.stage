@@ -9,9 +9,9 @@
     "npm": "10.9.2"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname $(grep HOST .env | cut -d '=' -f2) --port $(grep PORT .env | cut -d '=' -f2)",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --hostname $(grep HOST .env | cut -d '=' -f2) --port $(grep PORT .env | cut -d '=' -f2)",
     "lint": "next lint",
 
     "api:generate": "orval"
