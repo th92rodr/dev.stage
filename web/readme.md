@@ -1,29 +1,29 @@
-# 📺 DevStage — Event Referral System Application
+# DevStage - Event Referral System Application
 
-DevStage is the frontend application for the event referral system. It allows users to sign up for an event, view their referral stats, and track leaderboard rankings — all through a responsive and modern UI built with Next.js.
+DevStage is the frontend application for the **event referral system**. It allows users to sign up for an event, view their referral stats, and track leaderboard rankings — all through a responsive and modern UI built with Next.js.
 
 ---
 
-## 📚 Features
+## 🎯 Features
 
-* **Landing Page** (`/`):
+- **Landing Page** (`/`):
 
-  * Displays event information
-  * Contains a subscription form for users to join the event, with validation and real-time errors using zod and react-hook-form
-  * Redirects users to their personalized referral page after successful sign-up
+  - Displays event information
+  - Contains a subscription form for users to join the event, with validation and real-time errors using zod and react-hook-form
+  - Redirects users to their personalized referral page after successful sign-up
 
-* **Invite Page** (`/invite/[subscriberId]`):
+- **Invite Page** (`/invite/[subscriberId]`):
 
-  * Shows user's unique referral link with copy-to-clipboard support
-  * Displays real-time referral statistics:
+  - Shows user's unique referral link with copy-to-clipboard support
 
-    * Total link clicks
-    * Total successful referrals
-    * Current ranking position
+  - Displays real-time referral statistics:
+    - Total link clicks
+    - Total successful referrals
+    - Current ranking position
 
-  * Displays the ranking leaderboard highlighting the top 3 referrers
+  - Displays the ranking leaderboard highlighting the top 3 referrers
 
-* DevStage backend API integration auto-generated from the OpenAPI schema using Orval
+- DevStage backend API integration auto-generated from the OpenAPI schema using Orval
 
 ---
 
@@ -37,13 +37,19 @@ This project requires **Node.js v22.13.1**. Use [`nvm`](https://github.com/nvm-s
 nvm use v22.13.1
 ```
 
-### 2. Build the project
+### 2. Install the project dependencies
+
+```sh
+npm ci
+```
+
+### 3. Build the project
 
 ```sh
 npm run build
 ```
 
-### 3. Start the application
+### 4. Start the application
 
 ```sh
 npm start
@@ -55,7 +61,7 @@ npm start
 
 ## 📜 License
 
-This project is licensed under the BSD-3-Clause License.
+This project is licensed under the **BSD 3-Clause License**.
 
 ---
 
